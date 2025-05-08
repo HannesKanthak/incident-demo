@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/qmdemo
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+#       ddl-auto: none
+        ddl-auto: update
+  flyway:
+    enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      properties:
+        acks: all
+    admin:
+      auto-create: true
