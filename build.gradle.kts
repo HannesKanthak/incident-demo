@@ -1,3 +1,6 @@
+import com.github.gradle.node.npm.task.NpmInstallTask
+import com.github.gradle.node.npm.task.NpmTask
+
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
@@ -7,7 +10,6 @@ plugins {
     id("com.github.node-gradle.node") version "7.0.2"
 }
 
-group = "qm"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -66,9 +68,9 @@ node {
     nodeProjectDir.set(file("frontend"))
 }
 
-tasks.register<com.github.gradle.node.npm.task.NpmInstallTask>("npmInstallFrontend")
+tasks.register<NpmInstallTask>("npmInstallFrontend")
 
-tasks.register<com.github.gradle.node.npm.task.NpmTask>("npmBuildFrontend") {
+tasks.register<NpmTask>("npmBuildFrontend") {
     dependsOn("npmInstallFrontend")
     args.set(listOf("run", "build"))
 }

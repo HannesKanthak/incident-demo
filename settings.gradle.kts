@@ -1,1 +1,1 @@
-rootProject.name = "qm-demo"
+rootProject.name = "demo"

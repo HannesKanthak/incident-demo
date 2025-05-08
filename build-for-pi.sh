@@ -2,9 +2,9 @@
 
 set -e
 
-IMAGE_NAME="qmdemo-app"
+IMAGE_NAME="demo-app"
 TAG="arm64"
-EXPORT_FILE="qmdemo-app-${TAG}.tar.gz"
+EXPORT_FILE="demo-app-${TAG}.tar.gz"
 
 echo "🚀 Initialisiere buildx (falls nötig)..."
 docker buildx create --use --name tempbuilder 2>/dev/null || true

@@ -1,7 +1,7 @@
-package qm.demo.incident.dto.api
+package demo.incident.dto.api
 
-import qm.demo.incident.model.Incident
-import qm.demo.incident.model.IncidentStatus
+import demo.incident.model.Incident
+import demo.incident.model.IncidentStatus
 import java.time.LocalDateTime
 
 data class IncidentResponseDto(

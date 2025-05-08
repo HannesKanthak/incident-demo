@@ -1,16 +1,16 @@
-package qm.demo.incident.service
+package demo.incident.service
 
 import org.springframework.stereotype.Service
-import qm.demo.incident.dto.event.IncidentCreatedEventDto
-import qm.demo.incident.dto.api.IncidentRequestDto
-import qm.demo.incident.dto.api.IncidentResponseDto
-import qm.demo.incident.dto.event.IncidentStatusChangedEventDto
-import qm.demo.incident.dto.api.IncidentStatusUpdateDto
-import qm.demo.incident.dto.api.toResponseDto
-import qm.demo.incident.kafka.IncidentEventProducer
-import qm.demo.incident.model.Incident
-import qm.demo.incident.model.IncidentStatus
-import qm.demo.incident.repository.IncidentRepository
+import demo.incident.dto.event.IncidentCreatedEventDto
+import demo.incident.dto.api.IncidentRequestDto
+import demo.incident.dto.api.IncidentResponseDto
+import demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.dto.api.IncidentStatusUpdateDto
+import demo.incident.dto.api.toResponseDto
+import demo.incident.kafka.IncidentEventProducer
+import demo.incident.model.Incident
+import demo.incident.model.IncidentStatus
+import demo.incident.repository.IncidentRepository
 import java.time.LocalDateTime
 
 @Service

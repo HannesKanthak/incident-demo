@@ -1,6 +1,6 @@
-package qm.demo.incident.dto.event
+package demo.incident.dto.event
 
-import qm.demo.incident.model.IncidentStatus
+import demo.incident.model.IncidentStatus
 import java.time.LocalDateTime
 
 data class IncidentStatusChangedEventDto(

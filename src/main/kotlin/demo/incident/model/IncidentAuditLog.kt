@@ -1,4 +1,4 @@
-package qm.demo.incident.model
+package demo.incident.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue

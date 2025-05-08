@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class QmDemoApplication
+class DemoApplication
 
 fun main(args: Array<String>) {
-    runApplication<QmDemoApplication>(*args)
+    runApplication<DemoApplication>(*args)
 }

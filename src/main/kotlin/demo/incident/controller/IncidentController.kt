@@ -2,10 +2,10 @@ package demo.incident.controller
 
 import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.*
-import qm.demo.incident.dto.api.IncidentRequestDto
-import qm.demo.incident.dto.api.IncidentResponseDto
-import qm.demo.incident.dto.api.IncidentStatusUpdateDto
-import qm.demo.incident.service.IncidentService
+import demo.incident.dto.api.IncidentRequestDto
+import demo.incident.dto.api.IncidentResponseDto
+import demo.incident.dto.api.IncidentStatusUpdateDto
+import demo.incident.service.IncidentService
 
 @RestController
 @RequestMapping("/api/incidents")

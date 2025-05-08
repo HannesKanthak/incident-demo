@@ -1,7 +1,7 @@
-package qm.demo.incident.dto.event
+package demo.incident.dto.event
 
-import qm.demo.incident.model.IncidentSeverity
-import qm.demo.incident.model.IncidentType
+import demo.incident.model.IncidentSeverity
+import demo.incident.model.IncidentType
 import java.time.LocalDateTime
 
 data class IncidentCreatedEventDto(

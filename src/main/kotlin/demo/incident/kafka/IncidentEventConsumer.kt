@@ -3,9 +3,9 @@ package demo.incident.kafka
 import mu.KotlinLogging
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
-import qm.demo.incident.dto.event.IncidentStatusChangedEventDto
-import qm.demo.incident.model.IncidentAuditLog
-import qm.demo.incident.repository.IncidentAuditLogRepository
+import demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.model.IncidentAuditLog
+import demo.incident.repository.IncidentAuditLogRepository
 
 @Component
 class IncidentEventConsumer(

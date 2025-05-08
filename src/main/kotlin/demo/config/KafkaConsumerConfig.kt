@@ -1,4 +1,4 @@
-package qm.demo.config
+package demo.config
 
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
@@ -9,7 +9,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory
 import org.springframework.kafka.core.ConsumerFactory
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory
 import org.springframework.kafka.support.serializer.JsonDeserializer
-import qm.demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.dto.event.IncidentStatusChangedEventDto
 
 @EnableKafka
 @Configuration

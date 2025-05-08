@@ -1,10 +1,10 @@
-package qm.demo.incident.kafka
+package demo.incident.kafka
 
 import mu.KotlinLogging
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Component
-import qm.demo.incident.dto.event.IncidentCreatedEventDto
-import qm.demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.dto.event.IncidentCreatedEventDto
+import demo.incident.dto.event.IncidentStatusChangedEventDto
 
 @Component
 class IncidentEventProducer(

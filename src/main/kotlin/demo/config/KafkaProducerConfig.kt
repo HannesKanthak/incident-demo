@@ -1,4 +1,4 @@
-package qm.demo.config
+package demo.config
 
 import org.apache.kafka.clients.admin.NewTopic
 import org.apache.kafka.clients.producer.ProducerConfig
@@ -10,8 +10,8 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.kafka.core.ProducerFactory
 import org.springframework.kafka.support.serializer.JsonSerializer
-import qm.demo.incident.dto.event.IncidentCreatedEventDto
-import qm.demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.dto.event.IncidentCreatedEventDto
+import demo.incident.dto.event.IncidentStatusChangedEventDto
 
 @Configuration
 class KafkaProducerConfig {
