@@ -1,10 +1,6 @@
 package demo.incident.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
@@ -12,11 +8,10 @@ import java.time.LocalDateTime
 data class IncidentAuditLog(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-
-    val incidentId: Long,
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "incident_id", nullable = false)
+    val incident: Incident,
     val oldStatus: String,
     val newStatus: String,
-
     val changedAt: LocalDateTime = LocalDateTime.now()
 )
