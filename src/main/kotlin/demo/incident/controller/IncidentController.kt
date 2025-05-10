@@ -2,9 +2,9 @@ package demo.incident.controller
 
 import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.*
-import demo.incident.dto.api.IncidentRequestDto
-import demo.incident.dto.api.IncidentResponseDto
-import demo.incident.dto.api.IncidentStatusUpdateDto
+import demo.incident.dto.api.IncidentRequest
+import demo.incident.dto.api.IncidentResponse
+import demo.incident.dto.api.IncidentStatusUpdate
 import demo.incident.service.IncidentService
 
 @RestController
@@ -15,14 +15,14 @@ class IncidentController(
     ) {
 
     @PostMapping
-    fun create(@Valid @RequestBody body: IncidentRequestDto) = service.createIncident(body)
+    fun create(@Valid @RequestBody body: IncidentRequest) = service.createIncident(body)
 
     @GetMapping
-    fun list(): List<IncidentResponseDto> = service.listIncidents()
+    fun list(): List<IncidentResponse> = service.listIncidents()
 
     @PatchMapping("/{id}/status")
     fun updateStatus(
         @PathVariable id: Long,
-        @Valid @RequestBody body: IncidentStatusUpdateDto
-    ): IncidentResponseDto = service.updateStatus(id, body)
+        @Valid @RequestBody body: IncidentStatusUpdate
+    ): IncidentResponse = service.updateStatus(id, body)
 }

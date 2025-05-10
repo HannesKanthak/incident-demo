@@ -4,7 +4,7 @@ import demo.incident.model.Incident
 import demo.incident.model.IncidentStatus
 import java.time.LocalDateTime
 
-data class IncidentResponseDto(
+data class IncidentResponse(
     val id: Long,
     val title: String,
     val description: String,
@@ -15,7 +15,7 @@ data class IncidentResponseDto(
     val updatedAt: LocalDateTime?
 )
 
-fun Incident.toResponseDto() = IncidentResponseDto(
+fun Incident.toResponseDto() = IncidentResponse(
     id = id,
     title = title,
     description = description,

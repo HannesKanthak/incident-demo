@@ -10,8 +10,8 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.kafka.core.ProducerFactory
 import org.springframework.kafka.support.serializer.JsonSerializer
-import demo.incident.dto.event.IncidentCreatedEventDto
-import demo.incident.dto.event.IncidentStatusChangedEventDto
+import demo.incident.dto.event.IncidentCreatedEvent
+import demo.incident.dto.event.IncidentStatusChangedEvent
 
 @Configuration
 class KafkaProducerConfig {
@@ -28,12 +28,12 @@ class KafkaProducerConfig {
     }
 
     @Bean
-    fun incidentCreatedKafkaTemplate(): KafkaTemplate<String, IncidentCreatedEventDto> =
-        KafkaTemplate(producerFactory(IncidentCreatedEventDto::class.java))
+    fun incidentCreatedKafkaTemplate(): KafkaTemplate<String, IncidentCreatedEvent> =
+        KafkaTemplate(producerFactory(IncidentCreatedEvent::class.java))
 
     @Bean
-    fun incidentStatusChangedKafkaTemplate(): KafkaTemplate<String, IncidentStatusChangedEventDto> =
-        KafkaTemplate(producerFactory(IncidentStatusChangedEventDto::class.java))
+    fun incidentStatusChangedKafkaTemplate(): KafkaTemplate<String, IncidentStatusChangedEvent> =
+        KafkaTemplate(producerFactory(IncidentStatusChangedEvent::class.java))
 
     @Bean
     fun incidentUpdatedTopic(): NewTopic =

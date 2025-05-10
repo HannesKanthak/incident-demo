@@ -4,7 +4,7 @@ import demo.incident.model.IncidentSeverity
 import demo.incident.model.IncidentType
 import java.time.LocalDateTime
 
-data class IncidentCreatedEventDto(
+data class IncidentCreatedEvent(
     val id: Long,
     val title: String,
     val type: IncidentType,

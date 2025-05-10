@@ -1,16 +1,16 @@
 package demo.incident.service
 
-import org.springframework.stereotype.Service
-import demo.incident.dto.event.IncidentCreatedEventDto
-import demo.incident.dto.api.IncidentRequestDto
-import demo.incident.dto.api.IncidentResponseDto
-import demo.incident.dto.event.IncidentStatusChangedEventDto
-import demo.incident.dto.api.IncidentStatusUpdateDto
+import demo.incident.dto.api.IncidentRequest
+import demo.incident.dto.api.IncidentResponse
+import demo.incident.dto.api.IncidentStatusUpdate
 import demo.incident.dto.api.toResponseDto
+import demo.incident.dto.event.IncidentCreatedEvent
+import demo.incident.dto.event.IncidentStatusChangedEvent
 import demo.incident.kafka.IncidentEventProducer
 import demo.incident.model.Incident
 import demo.incident.model.IncidentStatus
 import demo.incident.repository.IncidentRepository
+import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 
 @Service
@@ -18,8 +18,8 @@ class IncidentService(
     private val repository: IncidentRepository,
     private val producer: IncidentEventProducer
 ) {
-    fun createIncident(dto: IncidentRequestDto): IncidentResponseDto {
-        val entity = Incident(
+    fun createIncident(dto: IncidentRequest): IncidentResponse {
+        val incident = Incident(
             title = dto.title,
             description = dto.description,
             type = dto.type,
@@ -28,10 +28,10 @@ class IncidentService(
             createdAt = LocalDateTime.now()
         )
 
-        val saved = repository.save(entity)
+        val saved = repository.save(incident)
 
         producer.sendCreated(
-            IncidentCreatedEventDto(
+            IncidentCreatedEvent(
                 id = saved.id,
                 title = saved.title,
                 type = saved.type,
@@ -43,35 +43,32 @@ class IncidentService(
         return saved.toResponseDto()
     }
 
-    fun listIncidents(): List<IncidentResponseDto> {
-        return repository.findAll().map(Incident::toResponseDto)
-    }
+    fun listIncidents(): List<IncidentResponse> =
+        repository.findAll().map(Incident::toResponseDto)
 
-    fun updateStatus(id: Long, dto: IncidentStatusUpdateDto): IncidentResponseDto {
-        val entity = repository.findById(id).orElseThrow {
+    fun updateStatus(id: Long, update: IncidentStatusUpdate): IncidentResponse {
+        val incident = repository.findById(id).orElseThrow {
             IllegalArgumentException("Incident $id not found")
         }
-        val oldStatus = entity.status
-        val newStatus = dto.status
-
+        val oldStatus = incident.status
+        val newStatus = update.status
         if (oldStatus == newStatus) {
-            return entity.toResponseDto()
+            return incident.toResponseDto()
         }
 
         if (oldStatus == IncidentStatus.RESOLVED) {
             throw IllegalStateException("Cannot update status from RESOLVED")
         }
-        entity.status = newStatus
-        entity.updatedAt = LocalDateTime.now()
+        val updatedIncident = incident.copy(status = newStatus, updatedAt = LocalDateTime.now())
 
-        val saved = repository.save(entity)
+        val saved = repository.save(updatedIncident)
 
         producer.sendStatusChanged(
-            IncidentStatusChangedEventDto(
+            IncidentStatusChangedEvent(
                 incidentId = id,
                 oldStatus = oldStatus,
                 newStatus = newStatus,
-                changedAt = saved.updatedAt!!
+                changedAt = saved.updatedAt
             )
         )
 
