@@ -59,9 +59,12 @@ class IncidentService(
         if (oldStatus == IncidentStatus.RESOLVED) {
             throw IllegalStateException("Cannot update status from RESOLVED")
         }
-        val updatedIncident = incident.copy(status = newStatus, updatedAt = LocalDateTime.now())
+        incident.apply {
+            status = newStatus
+            updatedAt = LocalDateTime.now()
+        }
 
-        val saved = repository.save(updatedIncident)
+        val saved = repository.save(incident)
 
         producer.sendStatusChanged(
             IncidentStatusChangedEvent(
