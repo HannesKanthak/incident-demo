@@ -1,5 +1,6 @@
 package demo.incident.kafka
 
+import demo.config.KafkaTopics
 import demo.incident.dto.event.IncidentCreatedEvent
 import io.kotest.core.spec.style.StringSpec
 import io.mockk.mockk
@@ -24,7 +25,7 @@ class IncidentEventProducerTest : StringSpec({
         producer.sendCreated(event)
 
         verify {
-            kafkaTemplate.send("incident.created", event.id.toString(), event)
+            kafkaTemplate.send(KafkaTopics.INCIDENT_CREATED, event.id.toString(), event)
         }
     }
 })

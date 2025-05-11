@@ -1,5 +1,6 @@
 package demo.incident.kafka
 
+import demo.config.KafkaTopics
 import demo.incident.dto.event.IncidentCreatedEvent
 import demo.incident.dto.event.IncidentStatusChangedEvent
 import demo.incident.model.IncidentAuditLog
@@ -17,7 +18,7 @@ class IncidentEventConsumer(
     private val kLogger = KotlinLogging.logger { }
 
     @KafkaListener(
-        topics = ["incident.updated"],
+        topics = [KafkaTopics.INCIDENT_UPDATED],
         groupId = "incident-service",
         containerFactory = "incidentStatusChangedKafkaListenerContainerFactory"
     )
@@ -35,7 +36,7 @@ class IncidentEventConsumer(
     }
 
     @KafkaListener(
-        topics = ["incident.created"],
+        topics = [KafkaTopics.INCIDENT_CREATED],
         groupId = "incident-service",
         containerFactory = "incidentCreatedKafkaListenerContainerFactory"
     )

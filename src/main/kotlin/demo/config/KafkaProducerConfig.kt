@@ -37,14 +37,14 @@ class KafkaProducerConfig {
 
     @Bean
     fun incidentUpdatedTopic(): NewTopic =
-        TopicBuilder.name("incident.updated")
+        TopicBuilder.name(KafkaTopics.INCIDENT_UPDATED)
             .partitions(1)
             .replicas(1)
             .build()
 
     @Bean
     fun incidentCreatedTopic(): NewTopic =
-        TopicBuilder.name("incident.created")
+        TopicBuilder.name(KafkaTopics.INCIDENT_CREATED)
             .partitions(1)
             .replicas(1)
             .build()
