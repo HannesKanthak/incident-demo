@@ -54,3 +54,22 @@ export async function put<T, B = unknown>(
 
     return await res.json() as T
 }
+
+export async function patch<T, B = unknown>(
+    path: string,
+    body: B
+): Promise<T> {
+    const res = await fetch(path, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+    })
+
+    if (!res.ok) {
+        throw new Error(`PATCH ${path} failed: ${res.status} ${res.statusText}`)
+    }
+
+    return await res.json() as T
+}

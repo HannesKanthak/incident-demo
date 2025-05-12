@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@keyframes fade-expand {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fade-collapse {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.98) translateY(-4px);
+    }
+}
+
+.animate-fade-expand {
+    animation: fade-expand 0.25s ease-out forwards;
+}
+
+.animate-fade-collapse {
+    animation: fade-collapse 0.25s ease-in forwards;
+}
+
+@keyframes flash-green {
+    0% {
+        background-color: #d1f1f2;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlight-flash {
+    animation: flash-green 1.2s ease-out forwards;
+}
+
