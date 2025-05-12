@@ -26,7 +26,8 @@ class IncidentEventConsumerTest : StringSpec({
             type = demo.incident.model.IncidentType.INCIDENT,
             severity = demo.incident.model.IncidentSeverity.HIGH,
             status = IncidentStatus.OPEN,
-            createdAt = LocalDateTime.now()
+            createdAt = LocalDateTime.now(),
+            updatedAt = LocalDateTime.now()
         )
 
         every { incidentRepo.findById(42L) } returns Optional.of(incident)
