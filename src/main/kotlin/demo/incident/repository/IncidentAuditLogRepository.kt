@@ -1,6 +1,10 @@
 package demo.incident.repository
 
-import org.springframework.data.jpa.repository.JpaRepository
 import demo.incident.model.IncidentAuditLog
+import org.springframework.data.domain.Sort
+import org.springframework.data.jpa.repository.JpaRepository
 
-interface IncidentAuditLogRepository : JpaRepository<IncidentAuditLog, Long>
+interface IncidentAuditLogRepository : JpaRepository<IncidentAuditLog, Long> {
+    fun findByIncidentId(incidentId: Long, sort: Sort): List<IncidentAuditLog>
+    fun existsByIncidentId(incidentId: Long): Boolean
+}
