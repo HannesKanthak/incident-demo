@@ -17,8 +17,8 @@ data class Incident(
     val severity: IncidentSeverity,
     @Enumerated(EnumType.STRING)
     var status: IncidentStatus = IncidentStatus.OPEN,
-    var updatedAt: LocalDateTime = LocalDateTime.now(),
-    val createdAt: LocalDateTime = LocalDateTime.now(),
+    var updatedAt: LocalDateTime,
+    val createdAt: LocalDateTime,
     @Version
     val version: Long = 0L
 )

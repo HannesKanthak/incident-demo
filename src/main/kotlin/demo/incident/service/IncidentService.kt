@@ -23,13 +23,15 @@ class IncidentService(
 ) {
     @Transactional
     fun createIncident(dto: IncidentRequest): IncidentResponse {
+        val now = LocalDateTime.now()
         val incident = Incident(
             title = dto.title,
             description = dto.description,
             type = dto.type,
             severity = dto.severity,
             status = IncidentStatus.OPEN,
-            createdAt = LocalDateTime.now()
+            createdAt = now,
+            updatedAt = now
         )
 
         val saved = repository.save(incident)
