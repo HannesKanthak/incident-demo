@@ -25,6 +25,8 @@ export default function IncidentPage() {
     const [loading, setLoading] = useState(false)
     const [page, setPage] = useState(0)
     const [totalPages, setTotalPages] = useState(1)
+    const [totalElements, setTotalElements] = useState<number | null>(null)
+
     const size = 5
 
     useEffect(() => {
@@ -52,12 +54,11 @@ export default function IncidentPage() {
             if (Array.isArray(data)) {
                 setIncidents(data)
                 setTotalPages(1)
+                setTotalElements(data.length)
             } else if (Array.isArray(data.content)) {
                 setIncidents(data.content)
                 setTotalPages(data.totalPages ?? 1)
-            } else {
-                setIncidents([])
-                setTotalPages(1)
+                setTotalElements(data.totalElements ?? null)
             }
         } finally {
             setLoading(false)
@@ -67,7 +68,8 @@ export default function IncidentPage() {
     async function handleCreate(incident: IncidentRequest) {
         const created = await post<IncidentResponse, IncidentRequest>('/api/incidents', incident)
 
-        setIncidents(prev => [{...created, __highlight: true}, ...prev])
+        setIncidents(prev => [{ ...created, __highlight: true }, ...prev])
+        setTotalElements(prev => (prev ?? 0) + 1)
         setPage(0)
     }
 
@@ -154,6 +156,11 @@ export default function IncidentPage() {
 
                 ) : (
                     <>
+                        {!loading && totalElements !== null && (
+                            <div className="text-sm text-gray-600 mb-2">
+                                <span className="font-semibold text-[#00a0a7]">{totalElements}</span> Incidents gefunden
+                            </div>
+                        )}
                         <IncidentList incidents={incidents} onStatusUpdated={fetchIncidents}/>
                         <PaginationControls page={page} totalPages={totalPages} onPageChange={setPage}/>
                     </>

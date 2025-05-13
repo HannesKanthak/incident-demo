@@ -7,10 +7,6 @@ interface Props {
 }
 
 export default function IncidentList({ incidents, onStatusUpdated }: Props) {
-    if (incidents.length === 0) {
-        return <p>Keine Incidents gefunden.</p>
-    }
-
     return (
         <div>
             {incidents.map((incident) => (
