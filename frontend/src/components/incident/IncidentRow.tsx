@@ -10,7 +10,7 @@ interface Props {
     onStatusUpdated: () => void
 }
 
-export default function IncidentRow({ incident, onStatusUpdated }: Props) {
+export default function IncidentRow({incident, onStatusUpdated}: Props) {
     const [editStatus, setEditStatus] = useState<IncidentStatus | null>(null)
     const [isExpanded, setIsExpanded] = useState(false)
     const [highlight, setHighlight] = useState<boolean>(Boolean(incident.__highlight))
@@ -28,7 +28,7 @@ export default function IncidentRow({ incident, onStatusUpdated }: Props) {
 
     async function handleSave() {
         if (!editStatus || editStatus === incident.status) return
-        await patch(`/api/incidents/${incident.id}/status`, { status: editStatus })
+        await patch(`/api/incidents/${incident.id}/status`, {status: editStatus})
         setEditStatus(null)
         onStatusUpdated()
     }
@@ -74,14 +74,14 @@ export default function IncidentRow({ incident, onStatusUpdated }: Props) {
                                 <button
                                     onClick={handleSave}
                                     title="Status speichern"
-                                    className="text-green-600 hover:text-green-800 text-xs px-1 transition-transform transform hover:scale-110"
+                                    className="text-green-600 hover:text-green-800 text-xs px-1 transition-transform transform hover:scale-110 cursor-pointer"
                                 >
                                     ✔
                                 </button>
                                 <button
                                     onClick={() => setEditStatus(null)}
                                     title="Änderung verwerfen"
-                                    className="text-red-500 hover:text-red-700 text-xs px-1 transition-transform transform hover:scale-110"
+                                    className="text-red-500 hover:text-red-700 text-xs px-1 transition-transform transform hover:scale-110 cursor-pointer"
                                 >
                                     ✖
                                 </button>
@@ -102,17 +102,36 @@ export default function IncidentRow({ incident, onStatusUpdated }: Props) {
                     </div>
                     <button
                         onClick={() => setIsExpanded(prev => !prev)}
-                        className="text-gray-400 hover:text-[#00a0a7] text-base"
+                        className="flex items-center gap-1 text-gray-400 hover:text-[#00a0a7] text-sm cursor-pointer"
                         title={isExpanded ? "Details verbergen" : "Details anzeigen"}
                         aria-label="Details anzeigen/verbergen"
                     >
-                        {isExpanded ? '▲' : '▼'}
+                        <span>Details</span>
+                        <span
+                            className={`transition-transform duration-200 ${
+                                isExpanded ? 'rotate-180' : ''
+                            } w-3 h-3`}
+                        >
+                            <svg
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                className="w-full h-full"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M5.23 7.79a.75.75 0 011.06-.02L10 11.44l3.71-3.67a.75.75 0 111.04 1.08l-4.25 4.2a.75.75 0 01-1.04 0L5.21 8.85a.75.75 0 01.02-1.06z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </span>
                     </button>
+
                 </div>
 
                 {/* Detailbereich */}
                 {isExpanded && (
-                    <IncidentAuditLogAccordion incidentId={incident.id} description={incident.description} />
+                    <IncidentAuditLogAccordion incidentId={incident.id} description={incident.description}/>
                 )}
             </div>
         </div>

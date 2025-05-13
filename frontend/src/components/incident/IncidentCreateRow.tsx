@@ -12,7 +12,7 @@ export default function IncidentCreateRow({onCreate}: Props) {
     const [form, setForm] = useState<IncidentRequest>({
         title: '',
         description: '',
-        type: 'INCIDENT',
+        type: 'NONCONFORMITY',
         severity: 'MEDIUM'
     })
     const [error, setError] = useState<string | null>(null)
@@ -29,7 +29,7 @@ export default function IncidentCreateRow({onCreate}: Props) {
         setIsClosing(true)
         setTimeout(() => {
             onCreate(form)
-            setForm({title: '', description: '', type: 'INCIDENT', severity: 'MEDIUM'})
+            setForm({title: '', description: '', type: 'NONCONFORMITY', severity: 'MEDIUM'})
             setIsVisible(false)
             setError(null)
             setIsClosing(false)
@@ -50,7 +50,7 @@ export default function IncidentCreateRow({onCreate}: Props) {
             <div className="mb-4">
                 <button
                     onClick={() => setIsVisible(true)}
-                    className="text-sm text-[#00a0a7] border border-[#00a0a7] px-3 py-1 rounded-md hover:bg-[#00a0a710] transition"
+                    className="text-sm text-[#00a0a7] border border-[#00a0a7] px-3 py-1 rounded-md hover:bg-[#00a0a710] transition cursor-pointer"
                 >
                     + Neuer Eintrag
                 </button>
@@ -79,9 +79,11 @@ export default function IncidentCreateRow({onCreate}: Props) {
                         value={form.type}
                         onChange={e => handleChange('type', e.target.value as any)}
                     >
-                        <option value="INCIDENT">{typeLabels.INCIDENT}</option>
-                        <option value="IMPROVEMENT">{typeLabels.IMPROVEMENT}</option>
-                        <option value="COMPLIANCE">{typeLabels.COMPLIANCE}</option>
+                        <option value="NONCONFORMITY">{typeLabels.NONCONFORMITY}</option>
+                        <option value="CUSTOMER_COMPLAINT">{typeLabels.CUSTOMER_COMPLAINT}</option>
+                        <option value="AUDIT_FINDING">{typeLabels.AUDIT_FINDING}</option>
+                        <option value="IMPROVEMENT_SUGGESTION">{typeLabels.IMPROVEMENT_SUGGESTION}</option>
+                        <option value="NEAR_MISS">{typeLabels.NEAR_MISS}</option>
                     </select>
                 </div>
 
@@ -114,14 +116,14 @@ export default function IncidentCreateRow({onCreate}: Props) {
                 <button
                     onClick={handleSubmit}
                     title="Speichern"
-                    className="text-green-600 hover:text-green-800 text-sm px-1 transition-transform transform hover:scale-110"
+                    className="text-green-600 hover:text-green-800 text-sm px-1 transition-transform transform hover:scale-110 cursor-pointer"
                 >
                     ✔
                 </button>
                 <button
                     onClick={handleCancel}
                     title="Abbrechen"
-                    className="text-red-500 hover:text-red-700 text-sm px-1 transition-transform transform hover:scale-110"
+                    className="text-red-500 hover:text-red-700 text-sm px-1 transition-transform transform hover:scale-110 cursor-pointer"
                 >
                     ✖
                 </button>

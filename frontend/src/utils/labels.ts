@@ -23,7 +23,9 @@ export const severityColors: Record<string, string> = {
 }
 
 export const typeLabels: Record<string, string> = {
-    INCIDENT: 'Vorfall',
-    IMPROVEMENT: 'Verbesserung',
-    COMPLIANCE: 'Vorgabe'
+    NONCONFORMITY: 'Abweichung',
+    CUSTOMER_COMPLAINT: 'Kundenbeschwerde',
+    AUDIT_FINDING: 'Auditabweichung',
+    IMPROVEMENT_SUGGESTION: 'Verbesserungsvorschlag',
+    NEAR_MISS: 'Beinahevorfall'
 }

@@ -15,16 +15,16 @@ export default function PaginationControls({ page, totalPages, onPageChange }: P
 
     return (
         <div className="mt-6 flex gap-2 justify-center items-center text-sm">
-            {/* Erste Seite + Auslassung */}
+            {/* Erste Seite + … */}
             {page > 1 && (
                 <>
                     <button
                         onClick={() => goToPage(0)}
-                        className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                        className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition cursor-pointer"
                     >
                         1
                     </button>
-                    <span className="text-gray-400">…</span>
+                    {page > 2 && <span className="text-gray-400">…</span>}
                 </>
             )}
 
@@ -32,13 +32,13 @@ export default function PaginationControls({ page, totalPages, onPageChange }: P
             {page > 0 && (
                 <button
                     onClick={() => goToPage(page - 1)}
-                    className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                    className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition cursor-pointer"
                 >
                     {page}
                 </button>
             )}
 
-            {/* Aktuelle Seite (kein Button) */}
+            {/* Aktuelle Seite */}
             <span className="px-3 py-1.5 rounded-md bg-[#00a0a7] text-white font-semibold shadow-sm">
                 {page + 1}
             </span>
@@ -47,19 +47,19 @@ export default function PaginationControls({ page, totalPages, onPageChange }: P
             {page < totalPages - 1 && (
                 <button
                     onClick={() => goToPage(page + 1)}
-                    className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                    className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition cursor-pointer"
                 >
                     {page + 2}
                 </button>
             )}
 
-            {/* Letzte Seite + Auslassung */}
+            {/* … + Letzte Seite */}
             {page < totalPages - 2 && (
                 <>
-                    <span className="text-gray-400">…</span>
+                    {page < totalPages - 3 && <span className="text-gray-400">…</span>}
                     <button
                         onClick={() => goToPage(totalPages - 1)}
-                        className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                        className="px-3 py-1.5 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition cursor-pointer"
                     >
                         {totalPages}
                     </button>
