@@ -30,7 +30,7 @@
 {
   "title": "Server-Ausfall",
   "description": "Datenbank war nicht erreichbar",
-  "type": "INCIDENT",
+  "type": "NONCONFORMITY",
   "severity": "HIGH"
 }
 ```
@@ -41,7 +41,7 @@
   "id": 1,
   "title": "Server-Ausfall",
   "description": "Datenbank war nicht erreichbar",
-  "type": "INCIDENT",
+  "type": "NONCONFORMITY",
   "severity": "HIGH",
   "status": "OPEN",
   "createdAt": "2024-05-01T10:15:30",
@@ -73,7 +73,7 @@
 {
   "id": 1,
   "title": "Server-Ausfall",
-  "type": "INCIDENT",
+  "type": "NONCONFORMITY",
   "severity": "HIGH",
   "createdAt": "2024-05-01T10:15:30"
 }

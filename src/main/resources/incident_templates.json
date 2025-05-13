@@ -1,302 +1,302 @@
 [
   {
-    "title": "Unvollständige Löschung personenbezogener Daten",
-    "description": "Nach einer Löschanfrage wurden Kundendaten zwar aus dem CRM, jedoch nicht aus dem Backup-System entfernt.",
-    "type": "COMPLIANCE",
+    "title": "Kunde bedankt sich – Supportteam irritiert",
+    "description": "Ein Kunde schickte eine explizit freundliche E-Mail nach der Problemlösung. Das Supportteam prüfte sicherheitshalber die Mail-Header.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Verbesserungsvorschlag: Tastenkürzel für Mittagspause",
+    "description": "Ein Kollege wünscht sich ein Shortcut 'Ctrl+M', um im Tool sofort 'bin in der Pause' zu setzen – mit Animation.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Nicht-konformer Einsatz von Comic Sans",
+    "description": "In einem offiziellen Auditprotokoll wurde durchgängig Comic Sans verwendet – laut Mitarbeiter 'aus Versehen, aber mit Absicht'.",
+    "type": "NONCONFORMITY",
+    "severity": "LOW"
+  },
+  {
+    "title": "QM-Handbuch enthält Rezept für Bananenbrot",
+    "description": "Eine Version des PDFs enthielt ab Seite 47 ein Backrezept. Vermutlich ein Copy-Paste-Unfall im Homeoffice.",
+    "type": "NONCONFORMITY",
+    "severity": "LOW"
+  },
+  {
+    "title": "Verbesserungsvorschlag enthält Diagramm, das niemand versteht",
+    "description": "Ein Kollege reichte eine brillante Verbesserungsidee ein – leider visualisiert mit einem handgezeichneten Kreisprozess in 9,5 Schritten.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Auditprotokoll enthält exakt 7 Minuten Stille",
+    "description": "Im offiziellen Auditmitschnitt findet sich ein kommentarloses Zeitfenster mit 7 Minuten. Der Auditor notierte später: 'Beobachtung: Nachdenklichkeitsphase.'",
+    "type": "AUDIT_FINDING",
+    "severity": "LOW"
+  },
+  {
+    "title": "Kunde verlangt ‘weniger Perfektionismus’",
+    "description": "Eine Rückmeldung lautete: 'Es ist zu durchdacht. Ich finde nichts mehr zum Meckern. Das irritiert mich.'",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Verbesserungsvorschlag: ‘Retros bitte mit Pizza, nicht mit Post-its’",
+    "description": "Ein Teammitglied schlug vor, statt Plus/Delta-Zetteln künftig Pizza zu servieren. 'Spricht mehr Sinne an.'",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Kunde fragt, ob Bug oder Feature – Antwort war: ‘Ja’",
+    "description": "Der Support antwortete zu schnell und zu ehrlich. Folge: Rückfrage, Eskalation, philosophische Diskussion.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Auditplan wurde versehentlich mit ‘Wanderkarte Spreewald’ überschrieben",
+    "description": "Ein Merge-Konflikt in der Dateiablage führte zur Anzeige eines Wanderpfades statt des QM-Ablaufs. Die Struktur wurde gelobt.",
+    "type": "AUDIT_FINDING",
+    "severity": "LOW"
+  },
+  {
+    "title": "Audit-Ordner mit Label ‘vielleicht wichtig’",
+    "description": "Ein Archivordner trug kein offizielles Label, nur den handschriftlichen Vermerk ‘vielleicht wichtig’. Der Inhalt war entscheidend.",
+    "type": "AUDIT_FINDING",
+    "severity": "LOW"
+  },
+  {
+    "title": "Kunde fragt nach Roadmap – bekommt philosophische Antwort",
+    "description": "Die Rückfrage ‘Wie sieht Ihre Produktvision aus?’ wurde mit einem Zitat von Steve Jobs beantwortet. Feedback: 'Inspirierend, aber keine Termine enthalten.'",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Deployment-Checkliste wurde nicht vollständig abgearbeitet",
+    "description": "Vor dem Live-Gang eines Features wurden nicht alle Punkte der Checkliste dokumentiert bestätigt. Die Funktion läuft stabil, aber Nachvollziehbarkeit fehlt.",
+    "type": "NONCONFORMITY",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Kunde bemängelt unklare Fehlermeldung",
+    "description": "Ein Nutzer meldete, dass bei der Anmeldung eine generische Fehlermeldung erscheint, ohne hilfreichen Hinweis zur Ursache oder Lösung.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Audit weist auf unvollständige Prozessbeschreibung hin",
+    "description": "Im internen QM-Audit fehlte für einen Teilprozess eine dokumentierte Verantwortlichkeit. Die Umsetzung erfolgt dennoch regelmäßig.",
+    "type": "AUDIT_FINDING",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Vorschlag zur Automatisierung der Rechnungsprüfung",
+    "description": "Ein Mitarbeiter schlug vor, den manuellen Abgleich von Rechnungsposten und Bestellungen durch eine automatische Validierung zu ergänzen.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Kritische Logs wurden durch Rotation zu früh überschrieben",
+    "description": "Bei der Analyse eines Fehlers war das relevante Logfile bereits durch eine automatische Logrotation gelöscht worden.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Langsame Reaktionszeit im Ticketsystem",
-    "description": "Supportanfragen benötigen aktuell durchschnittlich 48 Stunden zur ersten Antwort – der interne Zielwert liegt bei 24 Stunden.",
-    "type": "IMPROVEMENT",
+    "title": "Supportanfrage blieb über 48 Stunden unbeantwortet",
+    "description": "Ein eingehendes Ticket wurde versehentlich nicht dem richtigen Team zugewiesen und erst nach manueller Eskalation bearbeitet.",
+    "type": "CUSTOMER_COMPLAINT",
     "severity": "MEDIUM"
   },
   {
-    "title": "Unberechtigter Zugriff auf Mitarbeiterdaten",
-    "description": "Ein Mitarbeiter konnte im Intranet auf Personaldaten anderer Abteilungen zugreifen.",
-    "type": "COMPLIANCE",
+    "title": "Unbeabsichtigter Zugriff auf Testdaten in Produktionsumgebung",
+    "description": "In der Produktivdatenbank waren versehentlich alte Testdatensätze mit erfundenen Namen vorhanden. Sie wurden entfernt.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Systemabsturz während Monatsabschluss",
-    "description": "Die Finanzanwendung stürzte während eines kritischen Buchungslaufs ab. Daten mussten manuell geprüft werden.",
-    "type": "INCIDENT",
+    "title": "Sicherheitsrichtlinie im Wiki war veraltet",
+    "description": "Im internen Wiki war eine IT-Richtlinie verlinkt, die nicht mehr dem aktuellen Stand entsprach. Nutzer wurden darauf hingewiesen.",
+    "type": "AUDIT_FINDING",
+    "severity": "LOW"
+  },
+  {
+    "title": "Vorschlag zur konsistenten Benennung von Tickets",
+    "description": "Ein Entwicklerteam schlug vor, Namenskonventionen für JIRA-Tickets einzuführen, um Suchbarkeit und Analyse zu verbessern.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Fehlende Schulungsnachweise im Onboarding-Prozess",
+    "description": "Für drei neue Mitarbeitende fehlte die digitale Dokumentation zur durchgeführten Datenschutzschulung.",
+    "type": "NONCONFORMITY",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Kunde meldet Verwirrung über Statusbezeichnung",
+    "description": "Die Verwendung des Begriffs 'Entwurf' in der UI wurde von einem Kunden als uneindeutig empfunden.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Fehlende Dokumentation nach Konfigurationsänderung",
+    "description": "Eine wichtige Systemanpassung wurde direkt umgesetzt, jedoch erst nachträglich im Änderungsprotokoll ergänzt.",
+    "type": "AUDIT_FINDING",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Nahezu-Konflikt durch doppelte Rechtevergabe",
+    "description": "Zwei Nutzer erhielten gleichzeitig Schreibrechte auf denselben sensiblen Bereich, was zu einem Überschreibkonflikt führte – jedoch rechtzeitig erkannt wurde.",
+    "type": "NEAR_MISS",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Vorschlag zur Vereinfachung der Urlaubsbeantragung",
+    "description": "Ein Mitarbeiter schlug vor, den Urlaubsantrag direkt in das Zeiterfassungstool zu integrieren, statt über ein separates Formular.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Fehlende Backup-Bestätigung für kritisches System",
+    "description": "Für ein produktives Subsystem lag über zwei Wochen keine erfolgreiche Backup-Meldung im Monitoring vor.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Sicherheitsrichtlinie veraltet",
-    "description": "Die gültige Sicherheitsrichtlinie verweist auf technische Standards, die seit zwei Jahren nicht mehr angewendet werden.",
-    "type": "COMPLIANCE",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Vorschlag zur besseren Nachvollziehbarkeit von Änderungen",
-    "description": "Prozessänderungen sollen künftig mit changelog-Dateien dokumentiert werden, um interne Abstimmungen zu vereinfachen.",
-    "type": "IMPROVEMENT",
+    "title": "Kunde meldet unerwartetes Logout bei Inaktivität",
+    "description": "Nach ca. 10 Minuten ohne Eingabe wurde ein eingeloggter Nutzer automatisch ausgeloggt – laut Kundenfeedback ohne Warnung.",
+    "type": "CUSTOMER_COMPLAINT",
     "severity": "LOW"
   },
   {
-    "title": "Fehlende Signatur im Auditbericht",
-    "description": "Ein Auditbericht wurde abgelegt, ohne dass die erforderliche digitale Unterschrift eines Bereichsleiters vorliegt.",
-    "type": "COMPLIANCE",
+    "title": "Audit bemängelt fehlende Versionskontrolle bei Policies",
+    "description": "Interne Arbeitsanweisungen lagen nur in OneNote-Form vor, ohne klare Versionierung oder Änderungsprotokoll.",
+    "type": "AUDIT_FINDING",
     "severity": "MEDIUM"
   },
   {
-    "title": "Kundendaten in Testumgebung verwendet",
-    "description": "Echte personenbezogene Daten wurden für Tests genutzt, ohne vorherige Anonymisierung oder Freigabe.",
-    "type": "COMPLIANCE",
+    "title": "Vorschlag zur Darstellung der Systemverfügbarkeit im Kundencenter",
+    "description": "Ein Vorschlag aus dem Support-Team regt an, die aktuelle Systemverfügbarkeit öffentlich anzuzeigen, um Anfragen zu vermeiden.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Zugriffsrechte für ehemalige Mitarbeitende nicht rechtzeitig entzogen",
+    "description": "Ein Nutzerkonto war auch nach dem Austrittsdatum noch aktiv. Zugriff wurde nach manueller Prüfung gesperrt.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Optimierungsvorschlag für Report-Export",
-    "description": "Exportierte PDF-Berichte sollen künftig automatisch das Erstellungsdatum und einen Prüfnachweis enthalten.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Plötzlicher Ausfall der VPN-Verbindung",
-    "description": "Mehrere Mitarbeitende konnten sich über Stunden nicht mit dem Unternehmensnetzwerk verbinden.",
-    "type": "INCIDENT",
+    "title": "Beinahe-Datenverlust durch fehlerhafte Migration",
+    "description": "Während einer Datenmigration wurde eine falsche Datenbankreferenz ausgewählt – der Fehler wurde erkannt, bevor er wirksam wurde.",
+    "type": "NEAR_MISS",
     "severity": "HIGH"
   },
   {
-    "title": "Veraltete Preislisten im Kundenportal",
-    "description": "Im öffentlich einsehbaren Kundenbereich war eine veraltete Preisliste abrufbar.",
-    "type": "INCIDENT",
+    "title": "Unstimmigkeit bei Versionsnummern in Dokumentation und Anwendung",
+    "description": "In der Benutzeroberfläche wurde Version 3.5 angezeigt, in der Dokumentation jedoch 3.4.1. Kunden meldeten Verwirrung.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Reviewpflicht wurde bei Hotfix aus Zeitdruck übersprungen",
+    "description": "Ein kritischer Fix wurde direkt in den Hauptbranch gemerged, ohne Peer Review. Der Fix war korrekt, aber Prozess wurde nicht eingehalten.",
+    "type": "NONCONFORMITY",
     "severity": "MEDIUM"
   },
   {
-    "title": "Keine Nachvollziehbarkeit für Systemänderung",
-    "description": "Eine relevante Konfiguration wurde verändert, aber nicht dokumentiert oder zugeordnet.",
-    "type": "COMPLIANCE",
+    "title": "Vorschlag zur Einführung eines automatisierten Style-Checks",
+    "description": "Ein Teammitglied regte an, vor jedem Merge einen automatisierten Linter auszuführen, um manuelle Formatdiskussionen zu vermeiden.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Supportformular erzeugt Tickets mit leerem Betreff",
+    "description": "Ein Formularfeld wurde als optional konfiguriert, obwohl der Betreff für interne Zuordnung nötig ist.",
+    "type": "NONCONFORMITY",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Kunde meldet unvollständige Übersetzung in Benutzeroberfläche",
+    "description": "In der französischen Lokalisierung wurden einzelne Buttons und Tooltips nicht übersetzt dargestellt.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Audit beanstandet fehlende Dokumentation zu Recovery-Tests",
+    "description": "Obwohl Backups regelmäßig durchgeführt werden, fehlt ein dokumentierter Wiederherstellungstest im letzten Halbjahr.",
+    "type": "AUDIT_FINDING",
     "severity": "HIGH"
   },
   {
-    "title": "Fehlende Systemzuständigkeit",
-    "description": "Für ein internes Tool ist keine verantwortliche Person definiert. Störungen werden verzögert bearbeitet.",
-    "type": "IMPROVEMENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Fehlerhafte Statusanzeige im Freigabeworkflow",
-    "description": "In der Freigabeübersicht wird fälschlicherweise ein 'Abgeschlossen'-Status angezeigt, obwohl noch Unterschriften fehlen.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Unvollständige Archivierung nach Projektende",
-    "description": "Projektunterlagen wurden nicht fristgerecht archiviert. Die Vorgaben des QM-Handbuchs wurden damit nicht erfüllt.",
-    "type": "COMPLIANCE",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Vorschlag zur Einführung eines Schulungskalenders",
-    "description": "Zur besseren Übersicht über Pflichtschulungen soll ein zentraler Terminplaner eingeführt werden.",
-    "type": "IMPROVEMENT",
+    "title": "Vorschlag zur Archivierung in strukturierter Ordnerlogik",
+    "description": "Ein Vorschlag sieht vor, alte Projekte nach Jahrgang und Team zu archivieren, statt alphabetisch.",
+    "type": "IMPROVEMENT_SUGGESTION",
     "severity": "LOW"
   },
   {
-    "title": "Ausgelöstes Monitoring ohne Eskalation",
-    "description": "Ein automatischer Alarm wurde zwar protokolliert, aber es erfolgte keine Weiterleitung an das Bereitschaftsteam.",
-    "type": "INCIDENT",
+    "title": "Zugriffsrechte auf internes Wiki zu breit vergeben",
+    "description": "Alle Nutzer hatten Schreibrechte auf sensible QM-Dokumentationen. Rechte wurden eingeschränkt.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Manuelle Auswertung von Lieferantenbewertungen",
-    "description": "Der aktuelle Prozess zur Lieferantenbewertung erfolgt vollständig manuell. Eine Automatisierung ist sinnvoll.",
-    "type": "IMPROVEMENT",
+    "title": "Supportanfrage zu Datenschutz wurde intern verzögert weitergeleitet",
+    "description": "Ein Kunde stellte eine DSGVO-bezogene Anfrage, die intern zunächst als Standardticket behandelt wurde. Korrektur erfolgte nach 24h.",
+    "type": "CUSTOMER_COMPLAINT",
     "severity": "MEDIUM"
   },
   {
-    "title": "Unstimmigkeit in Liefernachverfolgung",
-    "description": "Ein Auftrag wurde laut System pünktlich geliefert, konnte aber vor Ort nicht nachvollzogen werden.",
-    "type": "INCIDENT",
+    "title": "Fehlkonfiguration in CI-Workflow verhindert automatische Tests",
+    "description": "Durch eine YAML-Änderung wurden keine Tests beim letzten Commit ausgeführt. Der Fehler fiel erst beim Deployment auf.",
+    "type": "NEAR_MISS",
     "severity": "MEDIUM"
   },
   {
-    "title": "Schulung nicht dokumentiert",
-    "description": "Eine Pflichtschulung wurde durchgeführt, aber es existiert kein Teilnehmernachweis.",
-    "type": "COMPLIANCE",
+    "title": "Vorschlag zur Einführung einer 'Was ist neu?'-Seite",
+    "description": "Ein Kollege schlägt vor, Release-Notes als changelog-seite im Produkt zu integrieren, um Nutzer:innen proaktiv zu informieren.",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Nicht dokumentierter manueller Eingriff im Live-System",
+    "description": "Ein Entwickler änderte ein Konfigurationsflag direkt in der Datenbank, ohne entsprechende Notiz im Ticketsystem.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Fehlende Backup-Validierung",
-    "description": "Zwar werden tägliche Backups erstellt, jedoch wurde in den letzten 6 Monaten kein Wiederherstellungstest durchgeführt.",
-    "type": "COMPLIANCE",
+    "title": "Fehlermeldung enthält technischen Stacktrace für Nutzer:innen",
+    "description": "Ein Client-Fehler zeigt einen vollständigen Stacktrace im Frontend an. Kunden meldeten Verwirrung.",
+    "type": "CUSTOMER_COMPLAINT",
+    "severity": "LOW"
+  },
+  {
+    "title": "Audit stellt unklare Rollenbeschreibung im Onboarding fest",
+    "description": "Im Audit wurde bemängelt, dass Verantwortlichkeiten für neue Mitarbeitende nicht klar genug definiert sind.",
+    "type": "AUDIT_FINDING",
     "severity": "MEDIUM"
   },
   {
-    "title": "Absturz der Zeiterfassungssoftware",
-    "description": "Während eines regulären Updates kam es zu einem Fehler, wodurch Mitarbeitende keine Arbeitszeiten erfassen konnten.",
-    "type": "INCIDENT",
+    "title": "Testdaten wurden versehentlich an echten Kunden gesendet",
+    "description": "Ein Testlauf mit Platzhalterdaten wurde aus Versehen in der Live-Umgebung aktiviert. Die betroffenen Kunden wurden informiert.",
+    "type": "NONCONFORMITY",
     "severity": "HIGH"
   },
   {
-    "title": "Protokollierung von Zugriffen unvollständig",
-    "description": "Bei sensiblen Systemen fehlen in den Logdateien die Benutzer-IDs. Eine nachträgliche Auswertung ist nicht möglich.",
-    "type": "COMPLIANCE",
+    "title": "Vorschlag zur Vereinheitlichung von Slack-Channel-Namen",
+    "description": "Ein Vorschlag regt an, interne Channel nach einem einheitlichen Namensschema zu strukturieren (z. B. ‘team-xyz’, ‘topic-abc’).",
+    "type": "IMPROVEMENT_SUGGESTION",
+    "severity": "LOW"
+  },
+  {
+    "title": "Geplanter Systemneustart wurde nicht kommuniziert",
+    "description": "Ein geplanter Reboot eines internen Systems wurde zwar durchgeführt, aber nicht wie vorgesehen im Teamkalender eingetragen.",
+    "type": "NONCONFORMITY",
+    "severity": "MEDIUM"
+  },
+  {
+    "title": "Backup-Server beinahe überschrieben durch falsches Skriptziel",
+    "description": "Ein Deployment-Skript enthielt eine fehlerhafte Ziel-URL und hätte beinahe das Backup-Volume überschrieben. Der Vorgang wurde abgebrochen.",
+    "type": "NEAR_MISS",
     "severity": "HIGH"
-  },
-  {
-    "title": "Vorschlag zur Einführung eines Feedbackprozesses",
-    "description": "Ein strukturierter Feedbackprozess für Projektteams soll eingeführt werden, um Learnings festzuhalten und Verbesserungen abzuleiten.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Nicht freigegebene Vorlage verwendet",
-    "description": "Ein Kundendokument wurde mit einer veralteten, nicht mehr freigegebenen Word-Vorlage erstellt und versendet.",
-    "type": "COMPLIANCE",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Monitoring-System nicht erreichbar",
-    "description": "Das zentrale Überwachungssystem war für 90 Minuten nicht erreichbar. In dieser Zeit konnten keine Alarme verarbeitet werden.",
-    "type": "INCIDENT",
-    "severity": "HIGH"
-  },
-  {
-    "title": "Mangelhafte Struktur von QM-Dokumenten",
-    "description": "Die aktuelle Ablagestruktur erschwert das Auffinden relevanter Arbeitsanweisungen. Ein verbessertes System wird vorgeschlagen.",
-    "type": "IMPROVEMENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Datenverlust durch Benutzerfehler",
-    "description": "Ein Mitarbeiter hat versehentlich Datensätze aus einer zentralen Liste gelöscht, ohne dass ein Wiederherstellungsmechanismus vorhanden war.",
-    "type": "INCIDENT",
-    "severity": "HIGH"
-  },
-  {
-    "title": "Nicht dokumentierte Rollenzuweisungen",
-    "description": "Einige administrative Rechte wurden vergeben, ohne dass die Zuweisung in der Rechte-Matrix dokumentiert wurde.",
-    "type": "COMPLIANCE",
-    "severity": "HIGH"
-  },
-  {
-    "title": "Vorschlag zur Automatisierung des Freigabeprozesses",
-    "description": "Manuelle Freigaben sollen zukünftig über ein Workflow-Modul abgewickelt werden, um Zeit zu sparen und Fehler zu vermeiden.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Unvollständige Schulungsnachweise",
-    "description": "Bei mehreren Mitarbeitenden fehlen Nachweise über die Teilnahme an verpflichtenden Sicherheitsunterweisungen.",
-    "type": "COMPLIANCE",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Fehlgeschlagene E-Mail-Zustellung",
-    "description": "System-E-Mails an Kund:innen wurden aufgrund eines DNS-Konfigurationsfehlers über mehrere Tage nicht zugestellt.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Überfällige Aktualisierung von Arbeitsanweisungen",
-    "description": "Die letzte Überarbeitung zentraler Anweisungen im Qualitätsmanagement liegt mehr als zwei Jahre zurück.",
-    "type": "COMPLIANCE",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Benutzerkonto mehrfach gesperrt",
-    "description": "Ein Mitarbeiter wurde mehrmals während der Arbeitszeit durch automatisches Sperren seines Kontos blockiert.",
-    "type": "INCIDENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Vorschlag zur verbesserten Versionskontrolle",
-    "description": "Dokumente im internen Wiki sollen künftig mit automatischer Versionsnummer versehen werden, um Missverständnisse zu vermeiden.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Unvollständige Systemfreigabe",
-    "description": "Ein neu eingeführtes Tool wurde produktiv genutzt, obwohl der Abschluss der Testphase nicht dokumentiert war.",
-    "type": "COMPLIANCE",
-    "severity": "HIGH"
-  },
-  {
-    "title": "Fehlerhafte Zeitauswertung im Monatsbericht",
-    "description": "Im Monatsbericht wurden Überstunden nicht korrekt summiert. Ursache war eine falsch interpretierte Zeitzone.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Schwachstelle im Upload-Mechanismus entdeckt",
-    "description": "Externe Sicherheitstests deckten auf, dass der Upload-Mechanismus keine Prüfung auf MIME-Typen durchführt.",
-    "type": "COMPLIANCE",
-    "severity": "HIGH"
-  },
-  {
-    "title": "Vorschlag zur Standardisierung von Abwesenheitsgründen",
-    "description": "Im Kalender sollen Abwesenheiten künftig über ein Dropdown mit festen Werten statt Freitext eingegeben werden.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Protokolleinträge unvollständig bei Fehlermeldungen",
-    "description": "Bei auftretenden Fehlern werden zwar Exceptions geloggt, aber keine Benutzerkontexte oder Sessiondaten gespeichert.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Kaffeemaschine ins Monitoring aufgenommen",
-    "description": "Ein Entwickler hat per SNMP die neue Kaffeemaschine in das Systemmonitoring eingebunden. Seitdem erscheinen ‘Bean Low’-Alerts im Slack-Channel.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "PowerPoint-Präsentation blockiert Beamer",
-    "description": "Eine 300 MB große Präsentation mit 14 eingebetteten Videos führte zum Einfrieren des gesamten Besprechungsraumsystems.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
-  },
-  {
-    "title": "Chatbot verwechselt ‘Support’ mit ‘Snacks’",
-    "description": "Ein Missverständnis im Natural Language Parsing führte dazu, dass der Chatbot bei ‘Ich brauche Support’ Snack-Empfehlungen gab.",
-    "type": "INCIDENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Excel-Formel startet Endlosschleife",
-    "description": "Ein Mitarbeiter baute eine Formel mit Zirkelbezug ein – und der monatliche Report rechnet seitdem ununterbrochen.",
-    "type": "INCIDENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Ein Hornbach-Warenkorb in der Codebase",
-    "description": "Ein Praktikant nutzte die `README.md`, um seine private Einkaufsliste zwischenzuspeichern. Enthält nun: Hammer, Dübel, Wandfarbe.",
-    "type": "COMPLIANCE",
-    "severity": "LOW"
-  },
-  {
-    "title": "Release-Name ‘v42_final_final_OK_FIX’ missverstanden",
-    "description": "Ein Deployment wurde irrtümlich rückgängig gemacht, weil der Release-Name als temporär interpretiert wurde.",
-    "type": "INCIDENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Standup-Roboter fährt gegen Blumentopf",
-    "description": "Der neu angeschaffte Meeting-Roboter hat beim morgendlichen Standup einen Blumentopf umgefahren. Keine Personenschäden.",
-    "type": "INCIDENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "AI-Kalender plant doppelte Mittagspause",
-    "description": "Der neue Assistent hat bei allen Mitarbeitenden zwei aufeinanderfolgende Mittagspausen eingetragen – ‘zur Sicherheit’.",
-    "type": "IMPROVEMENT",
-    "severity": "LOW"
-  },
-  {
-    "title": "Ein Emojivorschlag wurde als Richtlinie gespeichert",
-    "description": "Ein Testeintrag ‘🔥 = kritisch’ wurde versehentlich im QM-Handbuch als formale Bewertungsmatrix übernommen.",
-    "type": "COMPLIANCE",
-    "severity": "LOW"
-  },
-  {
-    "title": "Kaffeeduft-Sensor aktiviert Alarmanlage",
-    "description": "Ein IoT-Raumluftsensor deutete starken Kaffeegeruch als Rauch und löste einen Feueralarm aus.",
-    "type": "INCIDENT",
-    "severity": "MEDIUM"
   }
 ]

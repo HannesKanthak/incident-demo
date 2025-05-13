@@ -31,9 +31,11 @@ data class Incident(
 )
 
 enum class IncidentType {
-    INCIDENT,
-    IMPROVEMENT,
-    COMPLIANCE
+    NONCONFORMITY,
+    CUSTOMER_COMPLAINT,
+    AUDIT_FINDING,
+    IMPROVEMENT_SUGGESTION,
+    NEAR_MISS
 }
 
 enum class IncidentSeverity {

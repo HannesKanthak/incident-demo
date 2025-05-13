@@ -23,7 +23,7 @@ class IncidentEventConsumerTest : StringSpec({
             id = 42L,
             title = "Test Incident",
             description = "Test Description",
-            type = demo.incident.model.IncidentType.INCIDENT,
+            type = demo.incident.model.IncidentType.AUDIT_FINDING,
             severity = demo.incident.model.IncidentSeverity.HIGH,
             status = IncidentStatus.OPEN,
             createdAt = LocalDateTime.now(),

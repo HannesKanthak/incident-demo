@@ -13,7 +13,7 @@ data class IncidentSearchParams(
     val status: IncidentStatus? = null,
     val type: IncidentType? = null,
     val severity: IncidentSeverity? = null,
-    @field:Size(min = 3, message = "query must be at least 3 characters long")
+    @field:Size(min = 1, max = 100, message = "query must be between 1 and 100 characters")
     val query: String? = null,
     @field:Min(0)
     val page: Int = 0,

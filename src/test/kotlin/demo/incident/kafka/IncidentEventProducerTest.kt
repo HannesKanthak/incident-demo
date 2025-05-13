@@ -17,7 +17,7 @@ class IncidentEventProducerTest : StringSpec({
         val event = IncidentCreatedEvent(
             id = 1L,
             title = "Test",
-            type = demo.incident.model.IncidentType.INCIDENT,
+            type = demo.incident.model.IncidentType.AUDIT_FINDING,
             severity = demo.incident.model.IncidentSeverity.HIGH,
             createdAt = LocalDateTime.now()
         )
