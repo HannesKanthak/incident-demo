@@ -24,7 +24,12 @@ class JsonDataSeeder(
 ) {
     private val objectMapper = jacksonObjectMapper()
 
-    data class Template(val title: String, val description: String, val type: IncidentType, val severity: IncidentSeverity)
+    data class Template(
+        val title: String,
+        val description: String,
+        val type: IncidentType,
+        val severity: IncidentSeverity
+    )
 
     @PostConstruct
     fun seedFromJson() {
@@ -80,6 +85,8 @@ class JsonDataSeeder(
                             oldStatus = statusPath[index - 1].name,
                             newStatus = statusPath[index].name,
                             changedAt = baseTime.plusDays(index.toLong())
+                                .plusHours(Random.nextLong(0, 24))
+                                .plusMinutes(Random.nextLong(0, 60))
                         )
                     )
                 }
