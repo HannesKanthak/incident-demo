@@ -3,7 +3,9 @@ package demo.incident.kafka
 import demo.incident.dto.event.IncidentStatusChangedEvent
 import demo.incident.model.Incident
 import demo.incident.model.IncidentAuditLog
+import demo.incident.model.IncidentSeverity
 import demo.incident.model.IncidentStatus
+import demo.incident.model.IncidentType
 import demo.incident.repository.IncidentAuditLogRepository
 import demo.incident.repository.IncidentRepository
 import io.kotest.core.spec.style.StringSpec
@@ -23,8 +25,8 @@ class IncidentEventConsumerTest : StringSpec({
             id = 42L,
             title = "Test Incident",
             description = "Test Description",
-            type = demo.incident.model.IncidentType.AUDIT_FINDING,
-            severity = demo.incident.model.IncidentSeverity.HIGH,
+            type = IncidentType.AUDIT_FINDING,
+            severity = IncidentSeverity.HIGH,
             status = IncidentStatus.OPEN,
             createdAt = LocalDateTime.now(),
             updatedAt = LocalDateTime.now()

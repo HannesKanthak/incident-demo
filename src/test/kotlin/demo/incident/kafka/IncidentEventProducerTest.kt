@@ -2,6 +2,8 @@ package demo.incident.kafka
 
 import demo.config.KafkaTopics
 import demo.incident.dto.event.IncidentCreatedEvent
+import demo.incident.model.IncidentSeverity
+import demo.incident.model.IncidentType
 import io.kotest.core.spec.style.StringSpec
 import io.mockk.mockk
 import io.mockk.verify
@@ -17,8 +19,8 @@ class IncidentEventProducerTest : StringSpec({
         val event = IncidentCreatedEvent(
             id = 1L,
             title = "Test",
-            type = demo.incident.model.IncidentType.AUDIT_FINDING,
-            severity = demo.incident.model.IncidentSeverity.HIGH,
+            type = IncidentType.AUDIT_FINDING,
+            severity = IncidentSeverity.HIGH,
             createdAt = LocalDateTime.now()
         )
 
