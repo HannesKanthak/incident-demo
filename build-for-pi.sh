@@ -21,5 +21,5 @@ echo "📦 Exportiere Image nach ${EXPORT_FILE}..."
 docker save ${IMAGE_NAME}:${TAG} | gzip > ${EXPORT_FILE}
 
 echo "✅ Fertig!"
-echo "👉 Übertrage das Image z. B. mit:"
+echo "👉 Übertrage das Image z.B. mit:"
 echo "   scp ${EXPORT_FILE} pi@raspberrypi.local:~/"
