@@ -43,9 +43,9 @@ class JsonDataSeeder(
         val incidents = templates.shuffled()
             .map {
                 val createdAt = now
-                    .minusDays(Random.nextLong(3, 90))
-                    .minusHours(Random.nextLong(0, 24))
-                    .minusMinutes(Random.nextLong(0, 60))
+                    .minusDays(Random.Default.nextLong(3, 90))
+                    .minusHours(Random.Default.nextLong(0, 24))
+                    .minusMinutes(Random.Default.nextLong(0, 60))
                 val statusPath = generateStatusPath()
 
                 Incident(
@@ -57,8 +57,8 @@ class JsonDataSeeder(
                     createdAt = createdAt,
                     updatedAt = createdAt
                         .plusDays(statusPath.size.toLong() - 1)
-                        .plusHours(Random.nextLong(0, 24))
-                        .plusMinutes(Random.nextLong(0, 60))
+                        .plusHours(Random.Default.nextLong(0, 24))
+                        .plusMinutes(Random.Default.nextLong(0, 60))
                 ) to statusPath
             }
 
@@ -85,8 +85,8 @@ class JsonDataSeeder(
                             oldStatus = statusPath[index - 1].name,
                             newStatus = statusPath[index].name,
                             changedAt = baseTime.plusDays(index.toLong())
-                                .plusHours(Random.nextLong(0, 24))
-                                .plusMinutes(Random.nextLong(0, 60))
+                                .plusHours(Random.Default.nextLong(0, 24))
+                                .plusMinutes(Random.Default.nextLong(0, 60))
                         )
                     )
                 }
@@ -97,7 +97,7 @@ class JsonDataSeeder(
     }
 
     private fun generateStatusPath(): List<IncidentStatus> {
-        return when (Random.nextInt(3)) {
+        return when (Random.Default.nextInt(3)) {
             0 -> listOf(IncidentStatus.OPEN)
             1 -> listOf(IncidentStatus.OPEN, IncidentStatus.IN_PROGRESS)
             else -> listOf(IncidentStatus.OPEN, IncidentStatus.IN_PROGRESS, IncidentStatus.RESOLVED)
