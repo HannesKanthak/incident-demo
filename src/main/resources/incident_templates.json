@@ -253,7 +253,7 @@
   },
   {
     "title": "Vorschlag zur Einführung einer 'Was ist neu?'-Seite",
-    "description": "Ein Kollege schlägt vor, Release-Notes als changelog-seite im Produkt zu integrieren, um Nutzer:innen proaktiv zu informieren.",
+    "description": "Ein Kollege schlägt vor, Release-Notes als Changelog-Seite im Produkt zu integrieren, um Nutzer:innen proaktiv zu informieren.",
     "type": "IMPROVEMENT_SUGGESTION",
     "severity": "LOW"
   },
