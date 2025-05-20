@@ -30,7 +30,8 @@ class IncidentEventConsumer(
         val logEntry = IncidentAuditLog(
             incident = incident,
             oldStatus = event.oldStatus.name,
-            newStatus = event.newStatus.name
+            newStatus = event.newStatus.name,
+            changedAt = event.changedAt
         )
         auditRepo.save(logEntry)
     }
