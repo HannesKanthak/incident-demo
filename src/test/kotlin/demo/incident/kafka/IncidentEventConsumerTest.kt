@@ -51,5 +51,6 @@ class IncidentEventConsumerTest : StringSpec({
         slot.captured.incident shouldBe incident
         slot.captured.oldStatus shouldBe "OPEN"
         slot.captured.newStatus shouldBe "RESOLVED"
+        slot.captured.changedAt shouldBe event.changedAt
     }
 })
