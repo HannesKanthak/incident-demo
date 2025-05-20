@@ -11,10 +11,10 @@ class IncidentAuditLogService(
     private val auditRepo: IncidentAuditLogRepository
 ) {
     fun getAuditLog(incidentId: Long, direction: Sort.Direction): List<IncidentAuditLogResponse> {
-        if (!auditRepo.existsByIncidentId(incidentId)) {
+        if (!auditRepo.existsByIncident_Id(incidentId)) {
             throw IllegalArgumentException("Incident $incidentId not found")
         }
         val sort = Sort.by(direction, "changedAt")
-        return auditRepo.findByIncidentId(incidentId, sort).map { it.toResponseDto() }
+        return auditRepo.findByIncident_Id(incidentId, sort).map { it.toResponseDto() }
     }
 }
